@@ -1,4 +1,5 @@
-variable "vpc_id" {}
+variable "vpc_id" {
+}
 
 variable "prefix" {
   description = "The prefix for the resource names. You will probably want to set this to the name of your VPC, if you have multiple."
@@ -18,7 +19,7 @@ locals {
 
 variable "log_group_name" {
   default     = ""
-  description = "Defaults to `$${default_log_group_name}`"
+  description = "Defaults to `$$${default_log_group_name}`"
 }
 
 variable "tags" {
